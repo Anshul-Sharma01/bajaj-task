@@ -1,8 +1,9 @@
 # 📌 Bajaj Finserv API Assignment – Full Stack Developer Intern
 
-This project is a REST API built for the Bajaj Finserv Health Limited assignment for the Full Stack Developer Intern role.
 
 It processes an array and returns numbers (odd/even), alphabets, special characters, sum, and a concatenated string in the required format.
+
+> Since this API is hosted on free service on render, so the first request might take up a minute or two because render freezes the free instances if it is sitting idle and starts them again when the first request comes 
 
 ## 🚀 Tech Stack
 
@@ -28,7 +29,7 @@ It processes an array and returns numbers (odd/even), alphabets, special charact
 
 ## Hosted API URL
 
-👉 Deployed URL:
+👉 Deployed URL : https://bajaj-task-assignment.onrender.com/
 
 ## API Endpoint
 + Post : /bhfl
