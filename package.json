@@ -3,12 +3,14 @@
   "version": "1.0.0",
   "description": "This is my assignment solution for the bajaj finserve health limited assignment for the role of the full stack developer intern",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "start" : "npm run dev"
+    "start": "nodemon index.js"
   },
   "author": "Anshul Sharma",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^5.1.0",
     "nodemon": "^3.1.10"
   }
