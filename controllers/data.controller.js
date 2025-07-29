@@ -1,18 +1,26 @@
-import { ApiError } from "../utils/ApiError.js";
+
 import { ApiResponse } from "../utils/ApiResponse.js";
 
 
 
 export const fetchDataAfterProcessing = (req, res) => {
     try{
-        const { data } = req.body;
-        if(!Array.isArray(data)){
-            throw new ApiError(400, "Invalid input received, please make sure that you send data array through the body named : data");
-        }
-
         const userId = "anshul_sharma_29042004";
         const email = "anshul5010.be22@chitkarauniversity.edu.in";
         const rollNumber = "2211985010";
+
+        const { data } = req.body;
+        if(!Array.isArray(data)){
+            return res
+                .status(400)
+                .json(new ApiResponse(400, {
+                    is_success: false,
+                    user_id: userId,
+                    email,
+                    roll_number: rollNumber,
+                }, "Please send the data as array"));
+        }
+
 
         let sum = 0;
         const oddNumbers = [];
@@ -66,7 +74,15 @@ export const fetchDataAfterProcessing = (req, res) => {
           );
     }catch(err){
         console.error(`Error occurred while fetching data after processing : ${err}`);
-        throw new ApiError(400, "Error occurred while fetching the data");
+        return res
+        .status(400)
+        .json(new ApiResponse(400, {
+            is_success: false,
+            user_id: userId,
+            email,
+            roll_number: rollNumber,
+            error : err?.message
+        }, "Some error occurred"));
     }
 }
 
