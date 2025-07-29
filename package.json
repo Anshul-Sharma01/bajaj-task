@@ -1,0 +1,15 @@
+{
+  "name": "bajaj-finserv-assignment",
+  "version": "1.0.0",
+  "description": "This is my assignment solution for the bajaj finserve health limited assignment for the role of the full stack developer intern",
+  "main": "index.js",
+  "scripts": {
+    "start" : "npm run dev"
+  },
+  "author": "Anshul Sharma",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0",
+    "nodemon": "^3.1.10"
+  }
+}
